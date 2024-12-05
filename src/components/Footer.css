@@ -1,0 +1,37 @@
+.footer {
+    background-color: orange;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;  /* Make the footer fixed */
+    bottom: 0;  /* Position at the bottom of the screen */
+    left: 0;  /* Ensure it touches the left edge */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+    z-index: 10; /* To ensure it stays above other content */
+}
+
+.footer-left {
+    font-size: 14px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+.social-link svg {
+    font-size: 20px;
+}

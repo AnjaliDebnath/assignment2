@@ -1,0 +1,115 @@
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content container */
+.main-content {
+    flex: 1;
+    /* padding: 20px; */
+    /* padding-top: 80px; Add top padding to avoid overlap with fixed navbar */
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    position: sticky;  /* Make the navbar fixed */
+    top: 0;
+    left: 0;  /* Ensure it touches the left edge */
+    width: 100%;  /* Ensure it spans the full width of the screen */
+    z-index: 10;
+    box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+/* Left Section: Logo */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+}
+
+.logo-text {
+    margin-left: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Right Section: Options */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Notification Icon */
+.notification-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-icon {
+    font-size: 20px;
+    color: #555555;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #dddddd;
+    object-fit: cover;
+}
