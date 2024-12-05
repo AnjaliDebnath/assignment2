@@ -1,12 +1,9 @@
 import React, {useState} from "react";
 import './styles.css';
+import { FaBookmark } from "react-icons/fa";
 
 const JobCard = ({ job }) => {
-    const [isBookmarked, setIsBookmarked] = useState(false);
-  
-    const toggleBookmark = () => {
-      setIsBookmarked(!isBookmarked);
-    };
+    
   
     return (
       <div className="job-card">
@@ -20,22 +17,15 @@ const JobCard = ({ job }) => {
             <h3 className="job-role">{job.jobRole}</h3>
             <p className="company-name">{job.companyName}</p>
           </div>
-          <button
-            className="bookmark-icon"
-            onClick={toggleBookmark}
-            aria-label={isBookmarked ? "Unsave Job" : "Save Job"}
-          >
-            {isBookmarked ? (
-              <i className="fas fa-bookmark text-blue-500"></i> // Filled bookmark
-            ) : (
-              <i className="far fa-bookmark text-gray-500"></i> // Outline bookmark
-            )}
-          </button>
+         
         </div>
         <div className="job-details">
           <p><strong>Work Type:</strong> {job.workType}</p>
           <p><strong>Salary:</strong> {job.salary}</p>
           <p><strong>Location:</strong> {job.location}</p>
+          <div className="bookmark">
+          <FaBookmark />
+        </div>
         </div>
       </div>
     );

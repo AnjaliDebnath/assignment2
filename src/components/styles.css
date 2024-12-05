@@ -73,4 +73,7 @@
   .job-details strong {
     font-weight: 600;
   }
-  
+  .bookmark {
+    margin-left: 16px;
+    cursor: pointer;
+  }
