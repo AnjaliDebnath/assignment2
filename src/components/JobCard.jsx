@@ -1,31 +1,26 @@
 import React, {useState} from "react";
-import './styles.css';
+import './JobCard.css';
 import { FaBookmark } from "react-icons/fa";
 
 const JobCard = ({ job }) => {
-    
-  
     return (
       <div className="job-card">
-        <div className="job-card-header">
+        <div className="job-header">
+          <h3 className="job-role">{job.jobRole}</h3>
+          <span className="job-type">{job.workType}</span>
+        </div>
+        <p className="salary">Salary: {job.salary}</p>
+        <div className="job-footer">
           <img
             src={job.companyIcon}
             alt={`${job.companyName} logo`}
             className="company-icon"
           />
           <div>
-            <h3 className="job-role">{job.jobRole}</h3>
             <p className="company-name">{job.companyName}</p>
+            <p className="job-location">{job.location}</p>
           </div>
-         
-        </div>
-        <div className="job-details">
-          <p><strong>Work Type:</strong> {job.workType}</p>
-          <p><strong>Salary:</strong> {job.salary}</p>
-          <p><strong>Location:</strong> {job.location}</p>
-          <div className="bookmark">
-          <FaBookmark />
-        </div>
+          <FaBookmark className="bookmark-icon" />
         </div>
       </div>
     );
